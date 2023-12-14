@@ -1,0 +1,11 @@
+protocol StickerReducerProtocol {
+    mutating func reduce(_ currentState: Sticker,
+                         _ action: StickerModification) -> Sticker
+}
+
+struct StickerReducer: StickerReducerProtocol {
+    
+    mutating func reduce(_ currentState: Sticker,
+                         _ action: StickerModification) -> Sticker {
+        
+        var newState = currentState
